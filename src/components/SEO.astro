@@ -1,0 +1,66 @@
+---
+import { site, socials } from "@/data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = `${site.name} — ${site.title}`,
+  description = site.summary,
+  image = site.ogImage,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).toString();
+const ogImageUrl = new URL(image, Astro.site ?? site.url).toString();
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.title,
+  email: `mailto:${site.email}`,
+  url: site.url,
+  address: { "@type": "PostalAddress", addressLocality: "Gwalior", addressRegion: "MP", addressCountry: "IN" },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Madhav Institute of Technology & Science, Gwalior",
+  },
+  worksFor: { "@type": "Organization", name: "Kloudspot" },
+  knowsAbout: ["Generative AI", "LangGraph", "RAG", "FastAPI", "LLM Deployment", "vLLM", "Backend Engineering"],
+  sameAs: socials.filter((s) => s.label !== "Email").map((s) => s.href),
+};
+
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${site.name} — Portfolio`,
+  url: site.url,
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="author" content={site.name} />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageUrl} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+<!-- Structured data -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />
