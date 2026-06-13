@@ -1,0 +1,37 @@
+---
+import Section from "@/components/ui/Section.astro";
+import { skillGroups } from "@/data/skills";
+---
+
+<Section
+  id="skills"
+  eyebrow="Skills"
+  title="Technical Expertise"
+  subtitle="The stack I reach for to take an idea from notebook to production endpoint."
+>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="skill-grid">
+    {
+      skillGroups.map((g, i) => (
+        <article
+          class="skill-card card group p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/60"
+          data-reveal
+          style={`--reveal-delay: ${i * 60}ms`}
+        >
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500/10 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white dark:text-brand-400">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d={g.icon} stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="font-display text-base font-semibold">{g.category}</h3>
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {g.skills.map((s) => (
+              <li class="chip">{s}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</Section>
