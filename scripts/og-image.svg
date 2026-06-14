@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accentText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glowBrand" cx="0.18" cy="0.12" r="0.55">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowAccent" cx="0.9" cy="0.95" r="0.6">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#020617"/>
+  <rect width="1200" height="630" fill="url(#glowBrand)"/>
+  <rect width="1200" height="630" fill="url(#glowAccent)"/>
+
+  <!-- Dotted grid texture -->
+  <g fill="#1e293b" opacity="0.5">
+    <!-- generated dot pattern via repeated circles is verbose; use a subtle group of lines instead -->
+  </g>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#topbar)"/>
+
+  <!-- Inner frame -->
+  <rect x="56" y="56" width="1088" height="518" rx="28" fill="#0b1224" fill-opacity="0.55" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Eyebrow -->
+  <g font-family="JetBrains Mono, DejaVu Sans Mono, monospace">
+    <circle cx="112" cy="146" r="6" fill="#22d3ee"/>
+    <text x="130" y="152" font-size="24" letter-spacing="3" fill="#94a3b8">PORTFOLIO</text>
+  </g>
+
+  <!-- Name -->
+  <text x="108" y="270" font-family="Sora, Inter, DejaVu Sans, sans-serif" font-size="104" font-weight="700" fill="#ffffff">Akash Gaur</text>
+
+  <!-- Title -->
+  <text x="110" y="346" font-family="Sora, Inter, DejaVu Sans, sans-serif" font-size="46" font-weight="600" fill="url(#accentText)">GenAI &amp; Backend Engineer</text>
+
+  <!-- Tagline -->
+  <text x="112" y="420" font-family="Inter, DejaVu Sans, sans-serif" font-size="27" fill="#94a3b8">LLM systems  ·  RAG pipelines  ·  Agentic AI  ·  Scalable ML infrastructure</text>
+
+  <!-- Domain footer -->
+  <g font-family="JetBrains Mono, DejaVu Sans Mono, monospace">
+    <rect x="108" y="488" width="14" height="14" rx="3" fill="url(#topbar)"/>
+    <text x="134" y="500" font-size="26" fill="#e2e8f0">akashgaur.dev</text>
+  </g>
+</svg>

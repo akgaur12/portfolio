@@ -36,9 +36,8 @@ const { title, description, image } = Astro.props;
     <!-- Set theme before paint to avoid flash-of-wrong-theme -->
     <script is:inline>
       (() => {
-        const stored = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (stored === "dark" || (!stored && prefersDark)) {
+        // Light mode is the default; only go dark when the user explicitly chose it.
+        if (localStorage.getItem("theme") === "dark") {
           document.documentElement.classList.add("dark");
         }
       })();

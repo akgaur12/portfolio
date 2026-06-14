@@ -47,7 +47,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "Published ML Research Paper",
-    detail: "Authored a machine-learning paper on building-energy prediction, published in the MITS college journal.",
+    detail: "Authored \"Diabetes Prediction using Supervised Machine Learning,\" published in the MITS college journal.",
     year: "2023",
     kind: "research",
   },
@@ -88,10 +88,14 @@ export const certifications: Certification[] = [
   },
   {
     name: "Introduction to Programming in C",
+    issuer: "NPTEL",
+    year: "2023",
     image: "/certificates/Introduction-To-Programming-In-C.jpg",
   },
   {
     name: "Research Paper Certificate — ISCMCTR",
+    issuer: "MITS",
+    year: "2023",
     image: "/certificates/Paper-ID-97-Certificate-ISCMCTR.jpg",
   },
 ];

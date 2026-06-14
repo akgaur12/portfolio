@@ -17,7 +17,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 font-mono text-sm text-white shadow-lg shadow-brand-600/30 transition-transform group-hover:scale-105"
         >AG</span
       >
-      <span class="text-slate-900 dark:text-white">Akash<span class="text-brand-500">.</span></span>
+      <span class="text-slate-900 dark:text-white">Akash Gaur<span class="text-brand-500"></span></span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
@@ -38,12 +38,12 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         href={site.resumeUrl}
         class="btn-ghost hidden px-3 py-2 text-xs sm:inline-flex"
         download
-        aria-label="Download résumé (PDF)"
+        aria-label="Download resume (PDF)"
       >
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-        Résumé
+        Resume
       </a>
       <ThemeToggle />
       <button
@@ -78,7 +78,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
           </a>
         ))
       }
-      <a href={site.resumeUrl} download class="btn-primary mt-1">Download Résumé</a>
+      <a href={site.resumeUrl} download class="btn-primary mt-1">Download Resume</a>
     </div>
   </nav>
 </header>
