@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akashgaur.dev/sitemap-index.xml
+Sitemap: https://portfolio.akashgaur.workers.dev/sitemap-index.xml

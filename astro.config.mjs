@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 // Update this to your production domain before deploying.
-const SITE = "https://akashgaur.dev";
+const SITE = "https://portfolio.akashgaur.workers.dev";
 
 // https://astro.build/config
 export default defineConfig({

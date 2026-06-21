@@ -14,7 +14,7 @@ export const site = {
   // Get a free access key at https://web3forms.com (sent to your email).
   // This key is public by design — it only identifies which inbox receives the form.
   web3formsKey: "3662caf2-3420-47fe-b67d-deff74e312b4",
-  url: "https://akashgaur.dev",
+  url: "https://portfolio.akashgaur.workers.dev",
   ogImage: "/og-image.png",
 } as const;
 
